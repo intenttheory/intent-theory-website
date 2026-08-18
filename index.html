@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Intent Theory — AI Discovery & Advertising</title>
+  <meta name="description" content="AI Discovery & Advertising para marcas que quieren ser encontradas donde empiezan las nuevas decisiones de compra: ChatGPT Ads, AI Search, GEO y Performance Marketing." />
+  <meta property="og:title" content="Intent Theory — AI Discovery & Advertising" />
+  <meta property="og:description" content="Be found where decisions begin." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0B1020" />
+  <style>
+    :root{
+      --ink:#0B1020;
+      --ink-2:#11182B;
+      --ink-3:#18223A;
+      --lime:#C6FF4D;
+      --blue:#4D6BFF;
+      --cloud:#F6F7F9;
+      --white:#FFFFFF;
+      --slate:#667085;
+      --muted:#AAB2C5;
+      --line:rgba(255,255,255,.10);
+      --line-dark:#E5E8EF;
+      --max:1200px;
+      --radius:24px;
+      --shadow:0 30px 90px rgba(8,15,35,.18);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color:var(--ink);
+      background:var(--cloud);
+      text-rendering:optimizeLegibility;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{text-decoration:none;color:inherit}
+    button,input,textarea{font:inherit}
+    .container{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .nav-wrap{position:absolute;z-index:50;top:0;left:0;right:0}
+    nav{height:86px;display:flex;align-items:center;justify-content:space-between;color:#fff}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.03em;font-size:18px}
+    .mark{width:30px;height:30px;display:grid;place-items:center}
+    .nav-links{display:flex;align-items:center;gap:28px;color:#CAD0DE;font-size:14px}
+    .nav-links a:hover{color:#fff}
+    .nav-cta{background:#fff;color:var(--ink)!important;padding:12px 18px;border-radius:999px;font-weight:700}
+    .hero{
+      background:
+        radial-gradient(800px 500px at 85% 12%, rgba(77,107,255,.18), transparent 60%),
+        radial-gradient(500px 420px at 72% 60%, rgba(200,255,77,.08), transparent 65%),
+        var(--ink);
+      min-height:850px;color:#fff;position:relative;overflow:hidden;padding:160px 0 100px;
+    }
+    .grid-overlay{position:absolute;inset:0;opacity:.22;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.8),transparent 92%)}
+    .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:rgba(255,255,255,.04);padding:8px 12px;border-radius:999px;color:#D9DEEA;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+    .dot{width:8px;height:8px;border-radius:99px;background:var(--lime);box-shadow:0 0 22px rgba(198,255,77,.75)}
+    h1{font-size:clamp(54px,7.4vw,104px);line-height:.95;letter-spacing:-.06em;margin:24px 0 24px;max-width:800px}
+    h1 span{color:var(--lime)}
+    .hero-copy{color:#B8C0D1;font-size:20px;line-height:1.55;max-width:660px}
+    .hero-actions{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 20px;border-radius:999px;font-weight:800;font-size:14px;transition:.22s ease;border:1px solid transparent;cursor:pointer}
+    .btn-primary{background:var(--lime);color:var(--ink)}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 35px rgba(200,255,77,.18)}
+    .btn-secondary{border-color:var(--line);color:#fff;background:rgba(255,255,255,.03)}
+    .btn-secondary:hover{background:rgba(255,255,255,.08)}
+    .microcopy{margin-top:18px;color:#7F8AA3;font-size:12px}
+
+    .dashboard{background:rgba(17,24,43,.82);border:1px solid rgba(255,255,255,.11);border-radius:28px;box-shadow:0 35px 100px rgba(0,0,0,.32);backdrop-filter:blur(18px);overflow:hidden;transform:rotate(1.2deg)}
+    .dash-head{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--line)}
+    .dash-title{font-size:13px;font-weight:800}
+    .live{font-size:11px;color:#B4BDCF;display:flex;align-items:center;gap:6px}
+    .dash-body{padding:22px}
+    .score-row{display:grid;grid-template-columns:150px 1fr;gap:24px;align-items:center}
+    .score-ring{width:142px;height:142px;border-radius:50%;background:conic-gradient(var(--lime) 0 68%,rgba(255,255,255,.08) 68% 100%);display:grid;place-items:center;position:relative}
+    .score-ring:after{content:"";position:absolute;inset:9px;border-radius:50%;background:var(--ink-2)}
+    .score-num{position:relative;z-index:1;text-align:center}.score-num strong{font-size:40px;letter-spacing:-.05em}.score-num small{display:block;color:#8F99AF;font-size:10px;margin-top:3px}
+    .metric-list{display:grid;gap:13px}
+    .metric{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center}
+    .metric label{font-size:11px;color:#AEB6C8}.metric strong{font-size:12px}.bar{height:6px;border-radius:99px;background:rgba(255,255,255,.08);grid-column:1/-1;overflow:hidden}.bar span{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--blue),var(--lime))}
+    .signal-table{margin-top:20px;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+    .signal-row{display:grid;grid-template-columns:1.55fr .7fr .7fr;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line);font-size:11px;align-items:center}.signal-row:last-child{border:0}.signal-row.head{color:#768198;background:rgba(255,255,255,.025);text-transform:uppercase;letter-spacing:.06em;font-size:9px}.status{display:inline-flex;align-items:center;gap:6px}.status i{width:7px;height:7px;border-radius:50%;background:var(--lime)}.rank{color:#B8C0D1}
+    .trusted{position:relative;z-index:3;margin-top:70px;border-top:1px solid var(--line);padding-top:26px;color:#768198;font-size:11px;letter-spacing:.08em;text-transform:uppercase;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+    .platforms{display:flex;gap:26px;flex-wrap:wrap;color:#B1BACB;font-size:13px;font-weight:700;text-transform:none;letter-spacing:0}
+
+    section{padding:110px 0}
+    .section-tag{font-size:12px;text-transform:uppercase;letter-spacing:.08em;font-weight:800;color:#5F6E8E;margin-bottom:16px}
+    .section-title{font-size:clamp(38px,5vw,70px);line-height:1.02;letter-spacing:-.05em;margin:0 0 20px;max-width:900px}
+    .section-copy{font-size:18px;line-height:1.65;color:#667085;max-width:730px}
+    .shift{background:#fff}
+    .shift-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:56px}
+    .panel{border:1px solid var(--line-dark);border-radius:26px;padding:30px;background:#fff;min-height:330px}
+    .panel.dark{background:var(--ink);color:#fff;border-color:var(--ink)}
+    .panel-label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:800;color:#8993A6}
+    .panel h3{font-size:30px;letter-spacing:-.04em;margin:14px 0 18px}.panel p{color:#778196;line-height:1.65}.panel.dark p{color:#AEB6C8}
+    .search-ui{margin-top:28px;border:1px solid var(--line-dark);border-radius:15px;padding:12px 14px;color:#647084;font-size:13px;display:flex;gap:10px;align-items:center}.search-ui:before{content:"⌕";font-size:18px;color:#9AA3B2}
+    .results{display:grid;gap:10px;margin-top:14px}.result{height:10px;border-radius:20px;background:#EEF0F4}.result:nth-child(2){width:82%}.result:nth-child(3){width:68%}
+    .conversation{margin-top:26px;display:grid;gap:12px}.bubble{border-radius:18px;padding:13px 15px;font-size:12px;line-height:1.5}.bubble.user{background:#202B45;margin-left:44px}.bubble.ai{background:#161F35;border:1px solid var(--line);color:#CBD2E1}.bubble.ai b{color:var(--lime)}
+
+    .services{background:var(--cloud)}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:55px}
+    .card{background:#fff;border:1px solid var(--line-dark);border-radius:24px;padding:26px;min-height:330px;display:flex;flex-direction:column;transition:.24s ease}
+    .card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+    .card-number{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:#9AA4B7;font-size:11px}.card h3{font-size:24px;letter-spacing:-.035em;margin:26px 0 14px}.card p{color:#747F93;line-height:1.6;font-size:14px}.card ul{padding:0;margin:20px 0 0;list-style:none;display:grid;gap:9px;color:#4E5B73;font-size:13px}.card li:before{content:"↗";color:var(--blue);margin-right:8px}.card .link{margin-top:auto;padding-top:28px;font-weight:800;font-size:13px}
+    .card.feature{background:var(--ink);color:#fff;border-color:var(--ink)}.card.feature p,.card.feature ul{color:#AEB7C9}.card.feature .link{color:var(--lime)}
+
+    .method{background:var(--ink);color:#fff;position:relative;overflow:hidden}.method .section-tag{color:#8190AF}.method .section-copy{color:#AEB6C8}.method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:60px;border:1px solid var(--line);border-radius:26px;overflow:hidden}.method-step{padding:28px;min-height:280px;border-right:1px solid var(--line);background:rgba(255,255,255,.02)}.method-step:last-child{border:0}.method-step .n{color:var(--lime);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}.method-step h3{font-size:25px;letter-spacing:-.035em;margin:65px 0 13px}.method-step p{color:#9EA8BD;line-height:1.55;font-size:13px}
+
+    .proof{background:#fff}
+    .proof-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start;margin-top:54px}
+    .index-card{background:var(--cloud);border:1px solid var(--line-dark);border-radius:26px;padding:28px}.index-card h4{margin:0 0 8px;font-size:20px}.index-card p{color:#7A8498;font-size:13px;line-height:1.55}.mini-chart{height:180px;margin-top:26px;display:flex;align-items:flex-end;gap:10px;padding:18px;border-radius:18px;background:#fff;border:1px solid var(--line-dark)}.col{flex:1;border-radius:8px 8px 3px 3px;background:linear-gradient(to top,var(--blue),#8092FF);position:relative;min-width:18px}.col:nth-child(5){background:linear-gradient(to top,#8CB91B,var(--lime))}.col:after{content:attr(data-v);position:absolute;top:-20px;left:50%;transform:translateX(-50%);font-size:9px;color:#748098}
+    .proof-points{display:grid;gap:24px}.proof-point{display:grid;grid-template-columns:42px 1fr;gap:14px}.proof-icon{width:42px;height:42px;border-radius:12px;border:1px solid var(--line-dark);display:grid;place-items:center;font-weight:900;color:var(--blue)}.proof-point h4{font-size:18px;margin:2px 0 7px}.proof-point p{margin:0;color:#748098;font-size:14px;line-height:1.6}
+
+    .audit{background:var(--lime);padding:90px 0}.audit-wrap{display:grid;grid-template-columns:1fr .9fr;gap:80px;align-items:center}.audit .section-tag{color:#394615}.audit .section-title{max-width:670px}.audit .section-copy{color:#4B571E}.audit-box{background:var(--ink);border-radius:28px;padding:28px;color:#fff;box-shadow:0 26px 80px rgba(26,33,10,.22)}
+    .audit-box h3{font-size:24px;margin:0 0 8px}.audit-box p{color:#AAB4C8;font-size:13px;line-height:1.55;margin-bottom:22px}.form-grid{display:grid;gap:10px}.input{width:100%;border-radius:12px;border:1px solid var(--line);background:#141D32;color:#fff;padding:13px 14px;outline:none}.input:focus{border-color:rgba(200,255,77,.65)}.submit{width:100%;margin-top:3px;background:var(--lime);color:var(--ink);border:0;border-radius:12px;padding:14px;font-weight:900;cursor:pointer}.form-note{font-size:10px;color:#768198;margin-top:10px;line-height:1.5}
+
+    .values{background:var(--cloud)}
+    .values-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:48px}.value{background:#fff;border:1px solid var(--line-dark);border-radius:18px;padding:22px 24px;display:grid;grid-template-columns:38px 1fr;gap:14px}.value i{width:34px;height:34px;border-radius:11px;background:#EFF2FF;color:var(--blue);display:grid;place-items:center;font-style:normal;font-weight:900}.value h4{margin:0 0 6px;font-size:16px}.value p{margin:0;color:#7A8497;font-size:13px;line-height:1.5}
+
+    .final-cta{background:var(--ink);color:#fff;padding:100px 0}.final-inner{text-align:center;max-width:850px;margin:0 auto}.final-inner h2{font-size:clamp(44px,6vw,76px);letter-spacing:-.055em;line-height:1;margin:0 0 22px}.final-inner p{color:#AAB4C7;font-size:18px;line-height:1.6;max-width:670px;margin:0 auto 30px}.final-inner .btn{min-width:190px}
+
+    footer{background:#080C17;color:#8792A7;padding:32px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:12px}.footer-links{display:flex;gap:20px}.footer-brand{color:#fff;font-weight:800}
+
+
+    .menu-btn{display:none;background:transparent;border:1px solid var(--line);border-radius:12px;width:44px;height:44px;padding:10px;cursor:pointer}
+    .menu-btn span{display:block;height:2px;background:#fff;border-radius:10px;margin:5px 0}
+    .mobile-menu{display:none;position:fixed;z-index:60;inset:76px 12px auto 12px;background:rgba(11,16,32,.98);border:1px solid var(--line);border-radius:20px;padding:14px;box-shadow:0 25px 80px rgba(0,0,0,.42);backdrop-filter:blur(20px)}
+    .mobile-menu.open{display:block}.mobile-menu a{display:block;color:#fff;padding:14px 12px;border-bottom:1px solid var(--line);font-weight:700}.mobile-menu a:last-child{border-bottom:0;background:var(--lime);color:var(--ink);border-radius:12px;margin-top:8px;text-align:center}
+    .platform-preview{background:#fff}
+    .platform-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:72px;align-items:center;margin-top:54px}
+    .phone{width:316px;height:642px;border:9px solid #222B3C;border-radius:48px;background:var(--ink);box-shadow:0 40px 90px rgba(5,12,27,.30);margin:auto;overflow:hidden;position:relative}
+    .phone:before{content:"";position:absolute;top:11px;left:50%;transform:translateX(-50%);width:92px;height:24px;border-radius:99px;background:#050810;z-index:2}
+    .phone-ui{height:100%;padding:48px 18px 18px;color:#fff;background:radial-gradient(400px 260px at 90% 0%,rgba(77,107,255,.24),transparent 65%),var(--ink);display:flex;flex-direction:column}
+    .phone-head{display:flex;align-items:center;justify-content:space-between}.phone-head small{color:#8290A7}.avatar{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--lime))}
+    .phone-ui h3{font-size:26px;letter-spacing:-.04em;margin:26px 0 14px}.phone-score{padding:16px;border:1px solid var(--line);border-radius:18px;background:var(--ink-2)}.phone-score strong{font-size:43px;letter-spacing:-.05em}.phone-score span{color:var(--lime);font-size:10px;margin-left:5px}
+    .phone-tabs{display:flex;gap:6px;margin:14px 0}.phone-tabs button{flex:1;border:1px solid var(--line);border-radius:9px;padding:8px 4px;background:transparent;color:#8996AB;font-size:9px;cursor:pointer}.phone-tabs button.active{background:var(--blue);border-color:var(--blue);color:#fff}
+    .phone-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:10px}.phone-row span{color:#9EABC0}.phone-bottom{margin-top:auto;border-top:1px solid var(--line);padding-top:12px;display:flex;justify-content:space-around;color:#738198;font-size:9px}.phone-bottom b{color:var(--lime)}
+    .platform-copy h3{font-size:48px;line-height:1.05;letter-spacing:-.05em;margin:10px 0 18px}.platform-copy p{font-size:17px;line-height:1.65;color:#667085}.feature-list{display:grid;gap:14px;margin-top:26px}.feature{display:grid;grid-template-columns:34px 1fr;gap:12px}.feature i{width:34px;height:34px;border-radius:10px;background:#EEF2FF;color:var(--blue);font-style:normal;display:grid;place-items:center;font-weight:900}.feature b{display:block;margin-bottom:4px}.feature span{color:#7A8497;font-size:13px}
+
+    @media (max-width:1000px){
+      .hero{min-height:auto}.hero-inner{grid-template-columns:1fr;gap:54px}.dashboard{max-width:720px;transform:none}.cards{grid-template-columns:repeat(2,1fr)}.method-grid{grid-template-columns:repeat(2,1fr)}.method-step{border-bottom:1px solid var(--line)}.proof-grid,.audit-wrap,.platform-grid{grid-template-columns:1fr}.nav-links{display:none}.menu-btn{display:block}.platform-copy{order:-1}
+    }
+    @media (max-width:680px){
+      .container{width:min(var(--max),calc(100% - 24px))}.hero{padding:128px 0 70px}.hero-copy{font-size:17px}.score-row{grid-template-columns:1fr}.score-ring{margin:auto}.shift-grid,.cards,.values-grid{grid-template-columns:1fr}.method-grid{grid-template-columns:1fr}.method-step{border-right:0}.signal-row{grid-template-columns:1.3fr .7fr}.signal-row>*:nth-child(3){display:none}.trusted{margin-top:50px}.platforms{gap:14px}.footer-inner{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}.platform-copy h3{font-size:39px}.phone{width:294px;height:610px}section{padding:82px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-wrap">
+    <div class="container">
+      <nav>
+        <a href="#" class="brand" aria-label="Intent Theory">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64" width="32" height="32" fill="none" aria-hidden="true">
+              <path d="M5 8L47 29L5 20Z" fill="#2563EB" opacity=".72"/>
+              <path d="M5 23L47 31L5 29Z" fill="#4DA3FF" opacity=".92"/>
+              <path d="M5 35L47 33L5 41Z" fill="#4DA3FF"/>
+              <path d="M5 56L47 35L5 45Z" fill="#2563EB" opacity=".72"/>
+              <path d="M47 27L59 32L47 37Z" fill="#C6FF4D"/>
+            </svg>
+          </span>
+          Intent Theory
+        </a>
+        <div class="nav-links">
+          <a href="#services">Servicios</a>
+          <a href="#method">Metodología</a>
+          <a href="#intelligence">Intelligence</a>
+          <a href="#platform">Plataforma</a>
+          <a href="#principles">Principios</a>
+          <a class="nav-cta" href="#audit">Mide tu visibilidad</a>
+        </div>
+        <button class="menu-btn" aria-label="Abrir menú" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+      </nav>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#intelligence" onclick="toggleMenu()">Por qué ahora</a>
+    <a href="#services" onclick="toggleMenu()">Servicios</a>
+    <a href="#method" onclick="toggleMenu()">Metodología</a>
+    <a href="#platform" onclick="toggleMenu()">Plataforma</a>
+    <a href="#principles" onclick="toggleMenu()">Principios</a>
+    <a href="#audit" onclick="toggleMenu()">AI Visibility Audit →</a>
+  </div>
+
+  <header class="hero">
+    <div class="grid-overlay"></div>
+    <div class="container hero-inner">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> AI Discovery & Advertising</div>
+        <h1>Be found where <span>decisions</span> begin.</h1>
+        <p class="hero-copy">Tus clientes ya están preguntando a la IA qué comprar, a dónde ir y en quién confiar. Medimos si tu marca aparece, mejoramos esa presencia y conectamos AI discovery con resultados de negocio.</p>
+        <div class="hero-actions">
+          <a href="#audit" class="btn btn-primary">Mide tu AI Visibility <span>→</span></a>
+          <a href="#services" class="btn btn-secondary">Conoce cómo trabajamos</a>
+        </div>
+        <div class="microcopy">ChatGPT Ads · AI Search · GEO / AEO · Google Ads · Meta Ads · Measurement</div>
+      </div>
+
+      <div class="dashboard" aria-label="Demo de AI Visibility dashboard">
+        <div class="dash-head">
+          <div class="dash-title">AI Visibility Overview</div>
+          <div class="live"><span class="dot" style="width:6px;height:6px"></span> Live monitoring</div>
+        </div>
+        <div class="dash-body">
+          <div class="score-row">
+            <div class="score-ring"><div class="score-num"><strong>68</strong><small>VISIBILITY SCORE</small></div></div>
+            <div class="metric-list">
+              <div class="metric"><label>AI Share of Voice</label><strong>31.4%</strong><div class="bar"><span style="width:68%"></span></div></div>
+              <div class="metric"><label>Recommendation Rate</label><strong>42.8%</strong><div class="bar"><span style="width:58%"></span></div></div>
+              <div class="metric"><label>Citation Presence</label><strong>18.6%</strong><div class="bar"><span style="width:38%"></span></div></div>
+            </div>
+          </div>
+          <div class="signal-table">
+            <div class="signal-row head"><div>Intent signal</div><div>Status</div><div>Position</div></div>
+            <div class="signal-row"><div>“mejor opción para…”</div><div class="status"><i></i>Visible</div><div class="rank">#2</div></div>
+            <div class="signal-row"><div>“compara alternativas…”</div><div class="status"><i></i>Visible</div><div class="rank">#1</div></div>
+            <div class="signal-row"><div>“qué marca recomiendas…”</div><div class="status"><i style="background:#4D6BFF"></i>Partial</div><div class="rank">#4</div></div>
+            <div class="signal-row"><div>“dónde comprar…”</div><div class="status"><i style="background:#FFB84D"></i>Gap</div><div class="rank">—</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container trusted">
+      <span>Built for the new discovery layer</span>
+      <div class="platforms"><span>ChatGPT</span><span>Google</span><span>Gemini</span><span>Perplexity</span><span>Meta</span></div>
+    </div>
+  </header>
+
+  <section class="shift" id="intelligence">
+    <div class="container">
+      <div class="section-tag">The shift</div>
+      <h2 class="section-title">Search is becoming a conversation.</h2>
+      <p class="section-copy">Durante años las marcas compitieron por una posición en una lista de links. Ahora compiten por ser parte de una respuesta, una recomendación y una decisión.</p>
+      <div class="shift-grid">
+        <div class="panel">
+          <div class="panel-label">Traditional search</div>
+          <h3>Rank for a keyword.</h3>
+          <p>El usuario busca, compara resultados, abre múltiples páginas y construye su propia respuesta.</p>
+          <div class="search-ui">mejor software para mi empresa</div>
+          <div class="results"><div class="result"></div><div class="result"></div><div class="result"></div></div>
+        </div>
+        <div class="panel dark">
+          <div class="panel-label">AI discovery</div>
+          <h3>Become part of the answer.</h3>
+          <p>La IA interpreta contexto, intención y restricciones antes de recomendar opciones concretas.</p>
+          <div class="conversation">
+            <div class="bubble user">Necesito una opción confiable, fácil de implementar y con soporte en México. ¿Qué me recomiendas?</div>
+            <div class="bubble ai">Por tu contexto, consideraría <b>Marca A</b> y Marca B. Marca A destaca por…</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-tag">What we do</div>
+      <h2 class="section-title">Measure. Influence. Convert.</h2>
+      <p class="section-copy">Una oferta enfocada para entender cómo descubre la IA tu categoría, mejorar la presencia de tu marca y conectar ese descubrimiento con performance.</p>
+      <div class="cards">
+        <article class="card feature">
+          <div class="card-number">01 / DISCOVER</div>
+          <h3>AI Visibility Audit</h3>
+          <p>Descubre qué tan visible es tu marca frente a tus competidores en experiencias de AI Search.</p>
+          <ul><li>Prompt & intent map</li><li>Competitive share of voice</li><li>Citation & recommendation gaps</li><li>Prioritized action plan</li></ul>
+          <div class="link">Get your baseline →</div>
+        </article>
+        <article class="card">
+          <div class="card-number">02 / GROW</div>
+          <h3>AI Discovery</h3>
+          <p>GEO, AEO, contenido, entidades, structured data y autoridad para aumentar la probabilidad de ser descubierto y recomendado.</p>
+          <ul><li>Generative search strategy</li><li>Entity & content optimization</li><li>AI citation readiness</li><li>Ongoing visibility tracking</li></ul>
+          <div class="link">Improve discoverability →</div>
+        </article>
+        <article class="card">
+          <div class="card-number">03 / ADVERTISE</div>
+          <h3>ChatGPT Ads</h3>
+          <p>Estrategia, lanzamiento y optimización de publicidad dentro de ChatGPT con una lógica basada en intención conversacional.</p>
+          <ul><li>Conversational intent architecture</li><li>Campaign & creative setup</li><li>Pixel / CAPI measurement</li><li>Performance optimization</li></ul>
+          <div class="link">Launch an AI ads pilot →</div>
+        </article>
+        <article class="card">
+          <div class="card-number">04 / PERFORM</div>
+          <h3>Performance Media</h3>
+          <p>Google y Meta como capa de captura, retargeting y conversión para conectar AI discovery con resultados medibles.</p>
+          <ul><li>Google Search & PMax</li><li>Meta performance</li><li>Full-funnel measurement</li><li>Revenue attribution</li></ul>
+          <div class="link">Connect discovery to revenue →</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="method" id="method">
+    <div class="container">
+      <div class="section-tag">Intent Theory Method</div>
+      <h2 class="section-title">From intent to impact.</h2>
+      <p class="section-copy">No optimizamos canales aislados. Construimos un sistema que empieza con lo que la persona intenta resolver y termina en un resultado observable de negocio.</p>
+      <div class="method-grid">
+        <div class="method-step"><div class="n">01</div><h3>Measure</h3><p>Establecemos una línea base de prompts, visibilidad, menciones, citas, recomendaciones y performance.</p></div>
+        <div class="method-step"><div class="n">02</div><h3>Understand</h3><p>Identificamos intenciones, patrones, competidores y puntos donde la marca pierde relevancia.</p></div>
+        <div class="method-step"><div class="n">03</div><h3>Influence</h3><p>Actuamos sobre contenido, datos estructurados, autoridad, feeds, campañas y señales controlables.</p></div>
+        <div class="method-step"><div class="n">04</div><h3>Convert</h3><p>Conectamos la nueva visibilidad con leads, ventas, revenue y aprendizaje acumulativo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="proof">
+    <div class="container">
+      <div class="section-tag">Intelligence, not hype</div>
+      <h2 class="section-title">We measure what others guess.</h2>
+      <div class="proof-grid">
+        <div class="index-card">
+          <h4>Intent Index · Demo</h4>
+          <p>Ejemplo conceptual del tipo de benchmark propietario que construiremos por categoría, modelo y periodo.</p>
+          <div class="mini-chart">
+            <div class="col" style="height:35%" data-v="21"></div>
+            <div class="col" style="height:48%" data-v="29"></div>
+            <div class="col" style="height:57%" data-v="34"></div>
+            <div class="col" style="height:66%" data-v="40"></div>
+            <div class="col" style="height:86%" data-v="52"></div>
+            <div class="col" style="height:78%" data-v="47"></div>
+          </div>
+        </div>
+        <div class="proof-points">
+          <div class="proof-point"><div class="proof-icon">01</div><div><h4>Evidence over ego.</h4><p>Separamos métricas duras, proxies experimentales e hipótesis. Si los datos contradicen nuestra teoría, cambia la teoría.</p></div></div>
+          <div class="proof-point"><div class="proof-icon">02</div><div><h4>Repeated measurement.</h4><p>AI visibility no es una captura aislada. Medimos repetidamente para observar patrones, variabilidad y tendencia.</p></div></div>
+          <div class="proof-point"><div class="proof-icon">03</div><div><h4>Business outcomes.</h4><p>La visibilidad sólo importa cuando contribuye a una decisión. Diseñamos measurement para acercarla a leads, ventas y revenue.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="platform-preview" id="platform">
+    <div class="container">
+      <div class="section-tag">Future product · HTML mockup</div>
+      <h2 class="section-title">Agency today. Intelligence platform tomorrow.</h2>
+      <p class="section-copy">La futura app cliente nace de lo que hoy entregamos como servicio: visibilidad, prompts, competencia, ads e insights accionables. Este mockup ya permite navegar para validar la experiencia antes de construir backend.</p>
+      <div class="platform-grid">
+        <div class="phone">
+          <div class="phone-ui">
+            <div class="phone-head"><div><small>Intent Intelligence</small><br><b>Overview</b></div><div class="avatar"></div></div>
+            <h3>Your brand in AI.</h3>
+            <div class="phone-score"><small style="color:#8290A7">Visibility Score</small><br><strong>72.4</strong><span>▲ 8.6 pts</span></div>
+            <div class="phone-tabs"><button class="active" onclick="phoneTab(this,'visibility')">Visibility</button><button onclick="phoneTab(this,'citations')">Citations</button><button onclick="phoneTab(this,'ads')">Ads</button></div>
+            <div id="phoneData"><div class="phone-row"><span>ChatGPT mention rate</span><b>58%</b></div><div class="phone-row"><span>Competitive SOV</span><b>41%</b></div><div class="phone-row"><span>Recommendation rate</span><b>29%</b></div><div class="phone-row"><span>Tracked prompts</span><b>120</b></div></div>
+            <div class="phone-bottom"><b>Overview</b><span>Visibility</span><span>Ads</span><span>Insights</span></div>
+          </div>
+        </div>
+        <div class="platform-copy">
+          <div class="section-tag">Intent Intelligence</div>
+          <h3>Turn visibility data into decisions.</h3>
+          <p>No quiero que el futuro producto sea un dashboard que sólo entregue números. Debe explicar qué cambió, por qué importa y qué hacer después.</p>
+          <div class="feature-list">
+            <div class="feature"><i>◎</i><div><b>AI visibility monitoring</b><span>Histórico de menciones, citas, recommendations y competitive SOV.</span></div></div>
+            <div class="feature"><i>→</i><div><b>Intent library</b><span>Mapa vivo de prompts e intenciones que representan el customer journey.</span></div></div>
+            <div class="feature"><i>⚡</i><div><b>Actionable insights</b><span>Cambios priorizados por impacto, no una lista infinita de métricas.</span></div></div>
+          </div>
+          <div class="hero-actions" style="margin-top:26px"><a class="btn btn-primary" href="mobile-app.html" target="_blank">Abrir mockup móvil completo →</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="audit" id="audit">
+    <div class="container audit-wrap">
+      <div>
+        <div class="section-tag">AI Visibility Audit</div>
+        <h2 class="section-title">Do you know if AI recommends your brand?</h2>
+        <p class="section-copy">Obtén una línea base de cómo aparece tu marca frente a competidores en consultas relevantes para tu categoría y descubre tus principales gaps de visibilidad.</p>
+      </div>
+      <div class="audit-box">
+        <h3>Request your baseline</h3>
+        <p>Déjanos los datos mínimos para preparar el primer diagnóstico.</p>
+        <form id="leadForm" class="form-grid">
+          <input class="input" name="name" placeholder="Nombre" required />
+          <input class="input" name="company" placeholder="Empresa" required />
+          <input class="input" name="website" placeholder="Website" type="url" required />
+          <input class="input" name="email" placeholder="Correo corporativo" type="email" required />
+          <button class="submit" type="submit">Measure my AI visibility →</button>
+          <div class="form-note" id="formNote">No usamos información de conversaciones privadas para realizar este diagnóstico.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="values" id="principles">
+    <div class="container">
+      <div class="section-tag">How we operate</div>
+      <h2 class="section-title">Principles before playbooks.</h2>
+      <p class="section-copy">Las plataformas cambiarán. Estos principios determinan cómo decidimos, medimos y construimos.</p>
+      <div class="values-grid">
+        <div class="value"><i>→</i><div><h4>Start with the customer.</h4><p>Empezamos por lo que la persona intenta resolver, no por la plataforma que queremos vender.</p></div></div>
+        <div class="value"><i>◎</i><div><h4>Own the outcome.</h4><p>Nuestro trabajo no termina cuando una campaña está activa. Importa el resultado del sistema completo.</p></div></div>
+        <div class="value"><i>≠</i><div><h4>Evidence over ego.</h4><p>Las hipótesis son bienvenidas; los datos tienen derecho a demostrarnos que estamos equivocados.</p></div></div>
+        <div class="value"><i>↗</i><div><h4>Move fast. Measure faster.</h4><p>Las decisiones reversibles se toman rápido y cada experimento debe dejar aprendizaje observable.</p></div></div>
+        <div class="value"><i>−</i><div><h4>Make complexity disappear.</h4><p>Tecnología compleja por dentro. Decisiones claras, accionables y simples para el cliente.</p></div></div>
+        <div class="value"><i>+</i><div><h4>Raise the bar.</h4><p>Mejoramos continuamente la calidad de datos, estrategia, creatividad, producto y servicio.</p></div></div>
+        <div class="value"><i>✓</i><div><h4>Earn trust with truth.</h4><p>No inventamos métricas, atribución, capacidades de plataforma ni relaciones que no existen.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container final-inner">
+      <div class="eyebrow"><span class="dot"></span> Intent Theory</div>
+      <h2>The new discovery layer is already here.</h2>
+      <p>La pregunta ya no es si tus clientes usarán IA para descubrir opciones. La pregunta es si tu marca estará presente cuando lo hagan.</p>
+      <a href="#audit" class="btn btn-primary">Find out where you stand →</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div><span class="footer-brand">Intent Theory</span> · AI Discovery & Advertising</div>
+      <div class="footer-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#principles">Principles</a><a href="#audit">Contact</a></div>
+      <div>© 2026 Intent Theory</div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu(){ document.getElementById('mobileMenu').classList.toggle('open'); }
+    function phoneTab(btn,tab){
+      document.querySelectorAll('.phone-tabs button').forEach(x=>x.classList.remove('active')); btn.classList.add('active');
+      const d={visibility:[["ChatGPT mention rate","58%"],["Competitive SOV","41%"],["Recommendation rate","29%"],["Tracked prompts","120"]],citations:[["Citation rate","33%"],["Unique sources","48"],["Authority trend","+12%"],["Lost citations","6"]],ads:[["Spend","$24.8k"],["CTR","2.8%"],["CPC","$18.4"],["Conversions","112"]]};
+      document.getElementById('phoneData').innerHTML=d[tab].map(x=>`<div class="phone-row"><span>${x[0]}</span><b>${x[1]}</b></div>`).join('');
+    }
+    document.getElementById('leadForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(e.target));
+      localStorage.setItem('intentTheoryLeadDemo', JSON.stringify({...data, createdAt:new Date().toISOString()}));
+      const note = document.getElementById('formNote');
+      note.textContent = '✓ Solicitud guardada en esta demo. Al publicar conectaremos este formulario con HubSpot/CRM y Calendly.';
+      note.style.color = '#C8FF4D';
+      e.target.querySelector('.submit').textContent = 'Request received ✓';
+      e.target.querySelector('.submit').disabled = true;
+    });
+  </script>
+</body>
+</html>
