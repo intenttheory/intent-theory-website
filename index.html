@@ -137,13 +137,13 @@
     .phone-ui h3{font-size:26px;letter-spacing:-.04em;margin:26px 0 14px}.phone-score{padding:16px;border:1px solid var(--line);border-radius:18px;background:var(--ink-2)}.phone-score strong{font-size:43px;letter-spacing:-.05em}.phone-score span{color:var(--lime);font-size:10px;margin-left:5px}
     .phone-tabs{display:flex;gap:6px;margin:14px 0}.phone-tabs button{flex:1;border:1px solid var(--line);border-radius:9px;padding:8px 4px;background:transparent;color:#8996AB;font-size:9px;cursor:pointer}.phone-tabs button.active{background:var(--blue);border-color:var(--blue);color:#fff}
     .phone-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:10px}.phone-row span{color:#9EABC0}.phone-bottom{margin-top:auto;border-top:1px solid var(--line);padding-top:12px;display:flex;justify-content:space-around;color:#738198;font-size:9px}.phone-bottom b{color:var(--lime)}
-    .platform-copy h3{font-size:48px;line-height:1.05;letter-spacing:-.05em;margin:10px 0 18px}.platform-copy p{font-size:17px;line-height:1.65;color:#667085}.feature-list{display:grid;gap:14px;margin-top:26px}.feature{display:grid;grid-template-columns:34px 1fr;gap:12px}.feature i{width:34px;height:34px;border-radius:10px;background:#EEF2FF;color:var(--blue);font-style:normal;display:grid;place-items:center;font-weight:900}.feature b{display:block;margin-bottom:4px}.feature span{color:#7A8497;font-size:13px}
+    .platform-copy h3{font-size:48px;line-height:1.05;letter-spacing:-.05em;margin:10px 0 18px}.platform-copy p{font-size:17px;line-height:1.65;color:#667085}.feature-list{display:grid;gap:14px;margin-top:26px}.platform-feature{display:grid;grid-template-columns:34px 1fr;gap:12px}.platform-feature i{width:34px;height:34px;border-radius:10px;background:#EEF2FF;color:var(--blue);font-style:normal;display:grid;place-items:center;font-weight:900}.platform-feature b{display:block;margin-bottom:4px}.platform-feature span{color:#7A8497;font-size:13px}
 
     @media (max-width:1000px){
       .hero{min-height:auto}.hero-inner{grid-template-columns:1fr;gap:54px}.dashboard{max-width:720px;transform:none}.cards{grid-template-columns:repeat(2,1fr)}.method-grid{grid-template-columns:repeat(2,1fr)}.method-step{border-bottom:1px solid var(--line)}.proof-grid,.audit-wrap,.platform-grid{grid-template-columns:1fr}.nav-links{display:none}.menu-btn{display:block}.platform-copy{order:-1}
     }
     @media (max-width:680px){
-      .container{width:min(var(--max),calc(100% - 24px))}.hero{padding:128px 0 70px}.hero-copy{font-size:17px}.score-row{grid-template-columns:1fr}.score-ring{margin:auto}.shift-grid,.cards,.values-grid{grid-template-columns:1fr}.method-grid{grid-template-columns:1fr}.method-step{border-right:0}.signal-row{grid-template-columns:1.3fr .7fr}.signal-row>*:nth-child(3){display:none}.trusted{margin-top:50px}.platforms{gap:14px}.footer-inner{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}.platform-copy h3{font-size:39px}.phone{width:294px;height:610px}section{padding:82px 0}
+      .container{width:min(var(--max),calc(100% - 24px))}.hero{padding:128px 0 70px}.hero-copy{font-size:17px}.score-row{grid-template-columns:1fr}.score-ring{margin:auto}.shift-grid,.cards,.values-grid{grid-template-columns:1fr}.cards{gap:16px;margin-top:36px}.card{min-height:auto;padding:24px 22px;border-radius:22px}.card:hover{transform:none}.card h3{font-size:28px;margin:20px 0 12px}.card p{font-size:16px;line-height:1.55;margin:0}.card ul{font-size:15px;line-height:1.45;margin-top:18px;gap:11px}.card .link{padding-top:24px}.method-grid{grid-template-columns:1fr}.method-step{border-right:0}.signal-row{grid-template-columns:1.3fr .7fr}.signal-row>*:nth-child(3){display:none}.trusted{margin-top:50px}.platforms{gap:14px}.footer-inner{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}.platform-copy h3{font-size:39px}.phone{width:294px;height:610px}section{padding:82px 0}
     }
   </style>
 </head>
@@ -353,9 +353,9 @@
           <h3>Turn visibility data into decisions.</h3>
           <p>No quiero que el futuro producto sea un dashboard que sólo entregue números. Debe explicar qué cambió, por qué importa y qué hacer después.</p>
           <div class="feature-list">
-            <div class="feature"><i>◎</i><div><b>AI visibility monitoring</b><span>Histórico de menciones, citas, recommendations y competitive SOV.</span></div></div>
-            <div class="feature"><i>→</i><div><b>Intent library</b><span>Mapa vivo de prompts e intenciones que representan el customer journey.</span></div></div>
-            <div class="feature"><i>⚡</i><div><b>Actionable insights</b><span>Cambios priorizados por impacto, no una lista infinita de métricas.</span></div></div>
+            <div class="platform-feature"><i>◎</i><div><b>AI visibility monitoring</b><span>Histórico de menciones, citas, recommendations y competitive SOV.</span></div></div>
+            <div class="platform-feature"><i>→</i><div><b>Intent library</b><span>Mapa vivo de prompts e intenciones que representan el customer journey.</span></div></div>
+            <div class="platform-feature"><i>⚡</i><div><b>Actionable insights</b><span>Cambios priorizados por impacto, no una lista infinita de métricas.</span></div></div>
           </div>
           <div class="hero-actions" style="margin-top:26px"><a class="btn btn-primary" href="mobile-app.html" target="_blank">Abrir mockup móvil completo →</a></div>
         </div>
