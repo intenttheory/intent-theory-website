@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Intent Theory — AI Discovery & Advertising</title>
-  <meta name="description" content="Intent Theory ayuda a las marcas a medir y crecer su presencia en AI discovery y a activar publicidad y performance donde la intención se convierte en negocio." />
+  <meta name="description" content="Intent Theory ayuda a marcas en México a medir su visibilidad en IA, crecer su presencia en AI discovery y activar ChatGPT Ads y performance media cuando existe acceso." />
   <meta property="og:title" content="Intent Theory — AI Discovery & Advertising" />
   <meta property="og:description" content="Be found where decisions begin." />
   <meta property="og:type" content="website" />
@@ -139,11 +139,44 @@
     .phone-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:10px}.phone-row span{color:#9EABC0}.phone-bottom{margin-top:auto;border-top:1px solid var(--line);padding-top:12px;display:flex;justify-content:space-around;color:#738198;font-size:9px}.phone-bottom b{color:var(--lime)}
     .platform-copy h3{font-size:48px;line-height:1.05;letter-spacing:-.05em;margin:10px 0 18px}.platform-copy p{font-size:17px;line-height:1.65;color:#667085}.feature-list{display:grid;gap:14px;margin-top:26px}.platform-feature{display:grid;grid-template-columns:34px 1fr;gap:12px}.platform-feature i{width:34px;height:34px;border-radius:10px;background:#EEF2FF;color:var(--blue);font-style:normal;display:grid;place-items:center;font-weight:900}.platform-feature b{display:block;margin-bottom:4px}.platform-feature span{color:#7A8497;font-size:13px}
 
+
+    .entry{background:#fff}
+    .entry-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;margin-top:48px}
+    .entry-card{border:1px solid var(--line-dark);border-radius:26px;padding:28px;background:var(--cloud)}
+    .entry-card.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
+    .entry-card h3{font-size:28px;letter-spacing:-.04em;margin:10px 0 12px}
+    .entry-card p{color:#707B90;line-height:1.6;margin:0}.entry-card.primary p{color:#AEB7C9}
+    .entry-list{display:grid;gap:10px;margin-top:22px}.entry-item{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#4E5B73}.entry-card.primary .entry-item{color:#CBD2E1}.entry-item b{color:var(--blue)}.entry-card.primary .entry-item b{color:var(--lime)}
+    .cards.four{grid-template-columns:repeat(4,1fr)}
+    .price-line{margin-top:18px;padding-top:16px;border-top:1px solid var(--line-dark);font-size:13px;font-weight:800}.card.feature .price-line{border-color:var(--line);color:var(--lime)}
+    .price-line small{display:block;font-weight:500;color:#7A8497;margin-top:4px;line-height:1.45}.card.feature .price-line small{color:#96A2B9}
+    .buyflow{background:var(--ink);color:#fff}
+    .buyflow .section-tag{color:#8190AF}.buyflow .section-copy{color:#AEB6C8}
+    .flow-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:52px}
+    .flow-step{border:1px solid var(--line);border-radius:20px;padding:22px;background:rgba(255,255,255,.025);min-height:230px}
+    .flow-step .n{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--lime);font-size:11px}
+    .flow-step h3{font-size:20px;margin:34px 0 10px;letter-spacing:-.03em}.flow-step p{font-size:12.5px;line-height:1.55;color:#9EA8BD}
+    .human-note{margin-top:22px;border:1px solid var(--line);border-radius:18px;padding:18px 20px;display:flex;gap:16px;align-items:flex-start;color:#B6C0D2;background:rgba(255,255,255,.025)}
+    .human-note b{color:#fff}
+    .pricing{background:#fff}
+    .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+    .pricing-card{border:1px solid var(--line-dark);border-radius:24px;padding:26px;background:#fff}
+    .pricing-card.dark{background:var(--ink);color:#fff;border-color:var(--ink)}
+    .pricing-card .label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:800;color:#8893A7}
+    .pricing-card h3{font-size:26px;letter-spacing:-.04em;margin:18px 0 4px}
+    .pricing-card .amount{font-size:34px;font-weight:900;letter-spacing:-.05em;margin:10px 0 4px}.pricing-card .amount small{font-size:13px;font-weight:700;letter-spacing:0;color:#7B869B}
+    .pricing-card.dark .amount small{color:#9EA8BD}
+    .pricing-card p{color:#748098;font-size:13px;line-height:1.55}.pricing-card.dark p{color:#AAB4C8}
+    .pricing-card ul{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:9px;color:#4E5B73;font-size:13px}.pricing-card.dark ul{color:#CBD2E1}
+    .pricing-card li:before{content:"✓";color:var(--blue);margin-right:8px}.pricing-card.dark li:before{color:var(--lime)}
+    .tier-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}.tier{border:1px solid var(--line-dark);border-radius:14px;padding:13px;background:var(--cloud)}.tier b{display:block;font-size:12px}.tier span{font-size:11px;color:#778196}
+    .fit-note{margin-top:22px;color:#748098;font-size:12px;line-height:1.6}
+
     @media (max-width:1000px){
-      .hero{min-height:auto}.hero-inner{grid-template-columns:1fr;gap:54px}.dashboard{max-width:720px;transform:none}.cards{grid-template-columns:repeat(2,1fr)}.method-grid{grid-template-columns:repeat(2,1fr)}.method-step{border-bottom:1px solid var(--line)}.proof-grid,.audit-wrap,.platform-grid{grid-template-columns:1fr}.nav-links{display:none}.menu-btn{display:block}.platform-copy{order:-1}
+      .hero{min-height:auto}.hero-inner{grid-template-columns:1fr;gap:54px}.dashboard{max-width:720px;transform:none}.cards,.cards.four{grid-template-columns:repeat(2,1fr)}.method-grid{grid-template-columns:repeat(2,1fr)}.method-step{border-bottom:1px solid var(--line)}.proof-grid,.audit-wrap,.platform-grid,.entry-grid{grid-template-columns:1fr}.flow-grid{grid-template-columns:repeat(2,1fr)}.pricing-grid{grid-template-columns:1fr}.nav-links{display:none}.menu-btn{display:block}.platform-copy{order:-1}
     }
     @media (max-width:680px){
-      .container{width:min(var(--max),calc(100% - 24px))}.hero{padding:128px 0 70px}.hero-copy{font-size:17px}.score-row{grid-template-columns:1fr}.score-ring{margin:auto}.shift-grid,.cards,.values-grid{grid-template-columns:1fr}.cards{gap:16px;margin-top:36px}.card{min-height:auto;padding:24px 22px;border-radius:22px}.card:hover{transform:none}.card h3{font-size:28px;margin:20px 0 12px}.card p{font-size:16px;line-height:1.55;margin:0}.card ul{font-size:15px;line-height:1.45;margin-top:18px;gap:11px}.card .link{padding-top:24px}.method-grid{grid-template-columns:1fr}.method-step{border-right:0}.signal-row{grid-template-columns:1.3fr .7fr}.signal-row>*:nth-child(3){display:none}.trusted{margin-top:50px}.platforms{gap:14px}.footer-inner{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}.platform-copy h3{font-size:39px}.phone{width:294px;height:610px}section{padding:82px 0}
+      .container{width:min(var(--max),calc(100% - 24px))}.hero{padding:128px 0 70px}.hero-copy{font-size:17px}.score-row{grid-template-columns:1fr}.score-ring{margin:auto}.shift-grid,.cards,.cards.four,.values-grid,.flow-grid,.tier-strip{grid-template-columns:1fr}.cards{gap:16px;margin-top:36px}.card{min-height:auto;padding:24px 22px;border-radius:22px}.card:hover{transform:none}.card h3{font-size:28px;margin:20px 0 12px}.card p{font-size:16px;line-height:1.55;margin:0}.card ul{font-size:15px;line-height:1.45;margin-top:18px;gap:11px}.card .link{padding-top:24px}.method-grid{grid-template-columns:1fr}.method-step{border-right:0}.signal-row{grid-template-columns:1.3fr .7fr}.signal-row>*:nth-child(3){display:none}.trusted{margin-top:50px}.platforms{gap:14px}.footer-inner{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}.platform-copy h3{font-size:39px}.phone{width:294px;height:610px}section{padding:82px 0}
     }
   </style>
 </head>
@@ -164,24 +197,24 @@
           Intent Theory
         </a>
         <div class="nav-links">
-          <a href="#services">Servicios</a>
-          <a href="#method">Metodología</a>
+          <a href="#services">Productos</a>
+          <a href="#buyflow">Cómo funciona</a>
+          <a href="#pricing">Precios</a>
           <a href="#intelligence">Por qué ahora</a>
-          <a href="#platform">Plataforma</a>
-          <a href="#principles">Principios</a>
-          <a class="nav-cta" href="#audit">Mide tu visibilidad</a>
+          <a href="#method">Metodología</a>
+          <a class="nav-cta" href="#snapshot">Revisa tu visibilidad gratis</a>
         </div>
         <button class="menu-btn" aria-label="Abrir menú" onclick="toggleMenu()"><span></span><span></span><span></span></button>
       </nav>
     </div>
   </div>
   <div class="mobile-menu" id="mobileMenu">
+    <a href="#services" onclick="toggleMenu()">Productos</a>
+    <a href="#buyflow" onclick="toggleMenu()">Cómo funciona</a>
+    <a href="#pricing" onclick="toggleMenu()">Precios</a>
     <a href="#intelligence" onclick="toggleMenu()">Por qué ahora</a>
-    <a href="#services" onclick="toggleMenu()">Servicios</a>
     <a href="#method" onclick="toggleMenu()">Metodología</a>
-    <a href="#platform" onclick="toggleMenu()">Plataforma</a>
-    <a href="#principles" onclick="toggleMenu()">Principios</a>
-    <a href="#audit" onclick="toggleMenu()">Solicita tu AI Discovery Audit →</a>
+    <a href="#snapshot" onclick="toggleMenu()">Revisa tu visibilidad gratis →</a>
   </div>
 
   <header class="hero">
@@ -190,12 +223,12 @@
       <div>
         <div class="eyebrow"><span class="dot"></span> AI Discovery & Advertising</div>
         <h1>Be found where <span>decisions</span> begin.</h1>
-        <p class="hero-copy">Tus clientes ya están preguntando a la IA qué comprar, contratar y en quién confiar. Medimos dónde aparece tu marca, identificamos por qué gana o pierde y ejecutamos acciones para aumentar su presencia, recomendación y resultado comercial.</p>
+        <p class="hero-copy">Ayudamos a tu marca a ser descubierta, recomendada y anunciada en los nuevos recorridos de decisión impulsados por IA. Primero medimos con evidencia; después decides si quieres diagnosticar a fondo, crecer o activar publicidad.</p>
         <div class="hero-actions">
-          <a href="#audit" class="btn btn-primary">Solicita tu AI Discovery Audit <span>→</span></a>
-          <a href="#services" class="btn btn-secondary">Conoce nuestros servicios</a>
+          <a href="#snapshot" class="btn btn-primary">Revisa tu visibilidad en IA — gratis <span>→</span></a>
+          <a href="#buyflow" class="btn btn-secondary">Cómo funciona</a>
         </div>
-        <div class="microcopy">AI Discovery · GEO / AEO · ChatGPT Ads* · Google Ads · Meta Ads · Medición<br><span style="font-size:10px;color:#65708A">*Inventario publicitario en IA sujeto a disponibilidad por país, cuenta y acceso del anunciante.</span></div>
+        <div class="microcopy">Snapshot gratuito · AI Discovery · ChatGPT Ads* · Google Ads · Meta Ads<br><span style="font-size:10px;color:#65708A">*ChatGPT Ads está en beta. El acceso para anunciantes depende del país y la cuenta.</span></div>
       </div>
 
       <div class="dashboard" aria-label="Ejemplo de análisis de visibilidad en IA">
@@ -228,6 +261,38 @@
     </div>
   </header>
 
+
+  <section class="entry" id="entry">
+    <div class="container">
+      <div class="section-tag">Empieza sin comprar a ciegas</div>
+      <h2 class="section-title">Primero te mostramos la oportunidad. Después decides si vale la pena invertir.</h2>
+      <p class="section-copy">Para el mercado mexicano, la entrada no es pagar decenas de miles de pesos a una plataforma desconocida. Empiezas con un Snapshot gratuito de visibilidad en IA y, si vemos una oportunidad real, la revisamos contigo.</p>
+      <div class="entry-grid">
+        <div class="entry-card primary">
+          <div class="section-tag" style="color:#8FA0BE">Paso 0 · Gratuito</div>
+          <h3>AI Visibility Snapshot</h3>
+          <p>Una primera lectura de cómo aparece tu marca frente a decisiones relevantes y competidores. Sirve para determinar si existe una oportunidad suficiente para profundizar.</p>
+          <div class="entry-list">
+            <div class="entry-item"><b>01</b><span>Tu marca, categoría y competidores principales.</span></div>
+            <div class="entry-item"><b>02</b><span>Muestra de intenciones y presencia en IA.</span></div>
+            <div class="entry-item"><b>03</b><span>Señales iniciales de brechas y oportunidades.</span></div>
+          </div>
+          <div class="hero-actions" style="margin-top:24px"><a class="btn btn-primary" href="#snapshot">Solicitar Snapshot gratuito →</a></div>
+        </div>
+        <div class="entry-card">
+          <div class="section-tag">Si hay oportunidad</div>
+          <h3>Revisión de 20–30 minutos con un estratega.</h3>
+          <p>No te mandamos directo a un checkout de $95,000. Revisamos el contexto, validamos qué decisión de negocio quieres mover y te recomendamos sólo el producto que tenga sentido.</p>
+          <div class="entry-list">
+            <div class="entry-item"><b>✓</b><span>Sin compromiso de compra.</span></div>
+            <div class="entry-item"><b>✓</b><span>Alcance y precio claros antes de pagar.</span></div>
+            <div class="entry-item"><b>✓</b><span>La tecnología hace el trabajo repetible; una persona revisa estrategia y riesgo.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="shift" id="intelligence">
     <div class="container">
       <div class="section-tag">El cambio</div>
@@ -257,32 +322,62 @@
   <section class="services" id="services">
     <div class="container">
       <div class="section-tag">Qué puedes contratar</div>
-      <h2 class="section-title">Primero entiende dónde estás. Luego mejora. Después activa la demanda.</h2>
-      <p class="section-copy">Tres productos claros. El AI Discovery Audit establece la línea base, AI Discovery Growth convierte los hallazgos en mejora continua y AI Advertising & Performance captura intención pagada cuando el canal y el mercado lo permiten.</p>
-      <div class="cards">
+      <h2 class="section-title">Cuatro productos. Una ruta clara desde diagnóstico hasta adquisición.</h2>
+      <p class="section-copy">No necesitas contratar todo. Puedes entrar por el diagnóstico, por crecimiento continuo o directamente por publicidad si ya tienes una necesidad concreta.</p>
+      <div class="cards four">
         <article class="card feature">
-          <div class="card-number">01 / DESCUBRIR</div>
+          <div class="card-number">01 / DIAGNOSTICAR</div>
           <h3>AI Discovery Audit</h3>
-          <p>El punto de entrada. Medimos en qué decisiones mediadas por IA aparece tu marca, contra quién compite, dónde pierde y qué debe cambiar.</p>
-          <ul><li>Universo de prompts e intenciones</li><li>Share of Voice frente a competidores</li><li>Análisis de recomendaciones y citas</li><li>Plan de acción priorizado</li></ul>
-          <a class="link" href="#audit">Solicita el diagnóstico →</a>
+          <p>Diagnóstico profundo de dónde aparece tu marca en decisiones mediadas por IA, por qué gana o pierde y qué acciones priorizar.</p>
+          <ul><li>Universo de prompts e intenciones</li><li>Benchmark competitivo</li><li>Recomendaciones, citas y brechas</li><li>Plan de acción priorizado</li></ul>
+          <div class="price-line">Desde $35,000 MXN + IVA<small>Proyecto puntual. Se cotiza alcance antes de pagar.</small></div>
+          <a class="link" href="#snapshot">Empieza con el Snapshot →</a>
         </article>
+
         <article class="card">
           <div class="card-number">02 / CRECER</div>
           <h3>AI Discovery Growth</h3>
-          <p>Servicio recurrente para aumentar presencia, recomendación y autoridad en el descubrimiento con IA, y volver a medir el cambio.</p>
-          <ul><li>Medición continua</li><li>Optimización GEO / AEO y de contenido</li><li>Trabajo de entidades, citas y autoridad</li><li>Medición de tráfico y resultados desde IA</li></ul>
-          <a class="link" href="#audit">Hablar sobre crecimiento →</a>
+          <p>Servicio recurrente para aumentar presencia, recomendación y autoridad y volver a medir si los cambios están funcionando.</p>
+          <ul><li>Monitoreo continuo</li><li>GEO / AEO y contenido</li><li>Entidades, citas y autoridad</li><li>Medición de tráfico y resultados</li></ul>
+          <div class="price-line">Desde $29,000 MXN / mes + IVA<small>Suscripción anticipada. Plan inicial con mínimo de 3 meses.</small></div>
+          <a class="link" href="#snapshot">Evaluar fit →</a>
         </article>
+
         <article class="card">
-          <div class="card-number">03 / ACTIVAR</div>
-          <h3>AI Advertising & Performance</h3>
-          <p>Planeación, lanzamiento y optimización de medios pagados para capturar intención: publicidad en IA donde exista acceso, más Google y Meta cuando formen parte de la estrategia.</p>
-          <ul><li>Gestión de ChatGPT Ads en mercados elegibles</li><li>Google Ads · búsqueda y performance</li><li>Meta Ads · performance y retargeting</li><li>Medición y optimización de ingresos</li></ul>
-          <div class="availability">La disponibilidad de inventario publicitario en plataformas de IA depende del país, cuenta y acceso vigente del anunciante.</div>
-          <a class="link" href="#audit">Hablar sobre publicidad →</a>
+          <div class="card-number">03 / CHATGPT ADS</div>
+          <h3>ChatGPT Ads Management</h3>
+          <p>Planeación, lanzamiento y gestión especializada de campañas en ChatGPT Ads para cuentas y mercados con acceso vigente.</p>
+          <ul><li>Arquitectura de campañas y ad groups</li><li>Creatividades y pruebas</li><li>Medición de conversiones</li><li>Optimización de performance</li></ul>
+          <div class="availability">ChatGPT Ads está en beta. La cuenta publicitaria y la pauta pertenecen al anunciante; el acceso depende del país y la cuenta.</div>
+          <div class="price-line">Launch desde $15,000 MXN + IVA<small>Management desde $15,000 MXN / mes + IVA. Media spend separado.</small></div>
+          <a class="link" href="#snapshot">Hablar de ChatGPT Ads →</a>
+        </article>
+
+        <article class="card">
+          <div class="card-number">04 / PERFORMANCE</div>
+          <h3>AI & Performance Advertising</h3>
+          <p>Google y Meta como capa de captura, retargeting y conversión para conectar discovery con demanda y revenue.</p>
+          <ul><li>Google Search / Performance</li><li>Meta performance y retargeting</li><li>Landing y medición</li><li>Optimización hacia negocio</li></ul>
+          <div class="price-line">Cotización según alcance<small>Honorarios separados de la inversión publicitaria.</small></div>
+          <a class="link" href="#snapshot">Hablar de performance →</a>
         </article>
       </div>
+    </div>
+  </section>
+
+  <section class="buyflow" id="buyflow">
+    <div class="container">
+      <div class="section-tag">Cómo funciona de verdad</div>
+      <h2 class="section-title">Software por debajo. Estrategia humana donde sí importa.</h2>
+      <p class="section-copy">El objetivo es que el servicio escale sin convertir cada cliente en decenas de horas manuales. Automatizamos investigación, medición, parsing, diagnóstico y reporting; reservamos la intervención humana para QA, estrategia, riesgo y decisiones de negocio.</p>
+      <div class="flow-grid">
+        <div class="flow-step"><div class="n">01</div><h3>Solicitas el Snapshot</h3><p>Dejas sitio, empresa y correo. No hay llamada obligatoria para entrar al primer diagnóstico.</p></div>
+        <div class="flow-step"><div class="n">02</div><h3>El sistema mide</h3><p>Generamos intenciones, ejecutamos mediciones, estructuramos respuestas y detectamos patrones automáticamente.</p></div>
+        <div class="flow-step"><div class="n">03</div><h3>Revisamos contigo</h3><p>Si hay oportunidad, un estratega valida contexto y objetivo en una llamada de 20–30 minutos.</p></div>
+        <div class="flow-step"><div class="n">04</div><h3>Eliges producto</h3><p>Te damos alcance, precio y entregables claros. Pagas sólo si decides avanzar.</p></div>
+        <div class="flow-step"><div class="n">05</div><h3>Medimos → actuamos → repetimos</h3><p>El sistema hace el trabajo repetible; humanos revisan excepciones, estrategia y resultados.</p></div>
+      </div>
+      <div class="human-note"><span>◎</span><div><b>Interacción humana deliberada, no artesanal.</b><br>En un Audit maduro buscamos que el onboarding sea prácticamente autoservicio, con QA por excepción, revisión estratégica y un workshop ejecutivo. En Growth, el monitoreo y reporting son automáticos y la intervención humana se concentra en decisiones y sesiones estratégicas.</div></div>
     </div>
   </section>
 
@@ -326,11 +421,52 @@
     </div>
   </section>
 
+
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-tag">Precios de entrada · México</div>
+      <h2 class="section-title">Puedes entender el valor antes de comprometerte con un ticket grande.</h2>
+      <p class="section-copy">Los precios se muestran como punto de partida. El alcance final depende de mercado, categoría, volumen de medición, número de marcas y nivel de implementación.</p>
+
+      <div class="pricing-grid">
+        <div class="pricing-card dark">
+          <div class="label">Diagnóstico</div>
+          <h3>AI Discovery Audit</h3>
+          <div class="amount">$35,000 <small>MXN + IVA · desde</small></div>
+          <p>Para una empresa que quiere entender primero dónde está y qué debe hacer.</p>
+          <ul><li>Proyecto puntual</li><li>Diagnóstico + prioridades</li><li>Revisión estratégica</li></ul>
+        </div>
+
+        <div class="pricing-card">
+          <div class="label">Crecimiento recurrente</div>
+          <h3>AI Discovery Growth</h3>
+          <div class="amount">$29,000 <small>MXN / mes + IVA · desde</small></div>
+          <p>Para convertir el diagnóstico en mejora continua, medición y ejecución.</p>
+          <div class="tier-strip">
+            <div class="tier"><b>Growth</b><span>desde $29k / mes</span></div>
+            <div class="tier"><b>Advanced</b><span>desde $65k / mes</span></div>
+            <div class="tier"><b>Enterprise</b><span>$95k+ / mes</span></div>
+          </div>
+        </div>
+
+        <div class="pricing-card">
+          <div class="label">Wedge publicitario</div>
+          <h3>ChatGPT Ads</h3>
+          <div class="amount">$15,000 <small>MXN + IVA · launch desde</small></div>
+          <p>Para anunciantes con acceso vigente que quieren lanzar correctamente y aprender rápido.</p>
+          <ul><li>Launch desde $15k</li><li>Management desde $15k / mes</li><li>Pauta pagada directo por el cliente</li></ul>
+        </div>
+      </div>
+
+      <div class="fit-note">No presentamos un checkout de $95,000 MXN como primer contacto. La ruta recomendada es Snapshot gratuito → revisión breve → alcance claro → contratación. Enterprise aparece sólo cuando el alcance realmente lo justifica.</div>
+    </div>
+  </section>
+
   <section class="platform-preview" id="platform">
     <div class="container">
-      <div class="section-tag">Producto futuro · Concepto</div>
-      <h2 class="section-title">Servicio hoy. Plataforma de inteligencia mañana.</h2>
-      <p class="section-copy">La futura aplicación para clientes nace de lo que hoy entregamos como servicio. Lo que ves aquí es un concepto de producto, no una plataforma de autoservicio disponible actualmente.</p>
+      <div class="section-tag">Roadmap · No es un producto disponible hoy</div>
+      <h2 class="section-title">Lo que hoy entregamos como servicio está diseñado para convertirse en software.</h2>
+      <p class="section-copy">Este mockup muestra la dirección del producto futuro. Hoy el cliente compra servicios concretos; no una licencia de software ni una plataforma self-service.</p>
       <div class="platform-grid">
         <div class="phone">
           <div class="phone-ui">
@@ -345,7 +481,7 @@
         <div class="platform-copy">
           <div class="section-tag">Intent Intelligence</div>
           <h3>De servicio habilitado por software a plataforma de inteligencia.</h3>
-          <p>No quiero que el futuro producto sea un panel que sólo entregue números. Debe explicar qué cambió, por qué importa y qué hacer después.</p>
+          <p>La visión es que el software explique qué cambió, por qué importa y qué hacer después, sin convertir Intent Theory en una agencia que escala headcount de forma lineal.</p>
           <div class="feature-list">
             <div class="platform-feature"><i>◎</i><div><b>Monitoreo de visibilidad en IA</b><span>Histórico de menciones, citas, recomendaciones y Share of Voice competitivo.</span></div></div>
             <div class="platform-feature"><i>→</i><div><b>Biblioteca de intenciones</b><span>Mapa vivo de prompts e intenciones que representan el viaje del cliente.</span></div></div>
@@ -357,24 +493,31 @@
     </div>
   </section>
 
-  <section class="audit" id="audit">
+  <section class="audit" id="snapshot">
     <div class="container audit-wrap">
       <div>
-        <div class="section-tag">Empieza aquí</div>
-        <h2 class="section-title">Empieza con un AI Discovery Audit.</h2>
-        <p class="section-copy">Entiende dónde aparece hoy tu marca en el descubrimiento con IA, qué competidores ganan esas decisiones y cuáles son las acciones prioritarias para mejorar.</p>
+        <div class="section-tag">Primer paso · Sin costo</div>
+        <h2 class="section-title">Revisa tu visibilidad en IA antes de comprar.</h2>
+        <p class="section-copy">Solicita un AI Visibility Snapshot gratuito. Si encontramos una oportunidad relevante, te explicamos qué vimos y cuál de nuestros productos tendría sentido —si alguno.</p>
       </div>
       <div class="audit-box">
-        <h3>Cuéntanos qué quieres resolver</h3>
-        <p>Déjanos los datos mínimos. El AI Discovery Audit es el punto de entrada recomendado; si ya necesitas crecimiento continuo o publicidad, indícalo aquí.</p>
+        <h3>Solicita tu Snapshot gratuito</h3>
+        <p>Déjanos los datos mínimos para revisar tu marca y categoría. No estás contratando todavía ningún servicio.</p>
         <form id="leadForm" class="form-grid">
           <input class="input" name="name" placeholder="Nombre" required />
           <input class="input" name="company" placeholder="Empresa" required />
           <input class="input" name="website" placeholder="Sitio web" type="url" required />
           <input class="input" name="email" placeholder="Correo corporativo" type="email" required />
-          <select class="input" name="interest" required><option value="" disabled selected>¿Qué te interesa?</option><option>AI Discovery Audit — diagnóstico inicial</option><option>AI Discovery Growth — crecimiento continuo</option><option>AI Advertising & Performance — medios pagados</option></select>
-          <button class="submit" type="submit">Solicitar diagnóstico →</button>
-          <div class="form-note" id="formNote">Este formulario todavía es una demo local; antes de campañas lo conectaremos con HubSpot y nuestro aviso de privacidad.</div>
+          <select class="input" name="interest" required>
+            <option value="" disabled selected>¿Qué te interesa principalmente?</option>
+            <option>Entender mi visibilidad en IA</option>
+            <option>AI Discovery Growth</option>
+            <option>ChatGPT Ads</option>
+            <option>Google / Meta Performance</option>
+            <option>No estoy seguro todavía</option>
+          </select>
+          <button class="submit" type="submit">Solicitar Snapshot gratuito →</button>
+          <div class="form-note" id="formNote">Este formulario todavía es una demo local. Antes de enviar tráfico lo conectaremos con HubSpot y el aviso de privacidad.</div>
         </form>
       </div>
     </div>
@@ -402,14 +545,14 @@
       <div class="eyebrow"><span class="dot"></span> Intent Theory</div>
       <h2>La nueva capa de descubrimiento ya está aquí.</h2>
       <p>La pregunta ya no es si tus clientes usarán IA para descubrir opciones. La pregunta es si tu marca estará presente cuando lo hagan.</p>
-      <a href="#audit" class="btn btn-primary">Solicita tu AI Discovery Audit →</a>
+      <a href="#snapshot" class="btn btn-primary">Revisa tu visibilidad en IA — gratis →</a>
     </div>
   </section>
 
   <footer>
     <div class="container footer-inner">
       <div><span class="footer-brand">Intent Theory</span> · AI Discovery & Advertising</div>
-      <div class="footer-links"><a href="#">Privacidad</a><a href="#">Términos</a><a href="#principles">Principios</a><a href="#audit">Contacto</a></div>
+      <div class="footer-links"><a href="#">Privacidad</a><a href="#">Términos</a><a href="#principles">Principios</a><a href="#snapshot">Contacto</a></div>
       <div>© 2026 Intent Theory</div>
     </div>
   </footer>
@@ -426,7 +569,7 @@
       const data = Object.fromEntries(new FormData(e.target));
       localStorage.setItem('intentTheoryLeadDemo', JSON.stringify({...data, createdAt:new Date().toISOString()}));
       const note = document.getElementById('formNote');
-      note.textContent = '✓ Solicitud guardada en esta demo. El siguiente paso será conectar este formulario con HubSpot/CRM antes de enviar tráfico.';
+      note.textContent = '✓ Snapshot solicitado en esta demo. El siguiente paso será conectar este formulario con HubSpot/CRM antes de enviar tráfico.';
       note.style.color = '#C8FF4D';
       e.target.querySelector('.submit').textContent = 'Solicitud recibida ✓';
       e.target.querySelector('.submit').disabled = true;
